@@ -1,10 +1,13 @@
+//add price on price filed
 function addPrice(price, fieldName){
     const fieldElement = document.getElementById(fieldName+'-field-id');
     fieldElement.innerText = price;
 }
 
+//get all functional button
 const customizeBtn = document.getElementsByClassName('btn-outline-dark');
 
+//set event listener on every functional button
 for(element of customizeBtn){
     element.addEventListener('click', function(event){
         const btnName = event.target.innerText;
@@ -29,6 +32,7 @@ for(element of customizeBtn){
     });
 }
 
+//count total selected product price
 function totalPrice(){
     let totalPrice = 0;
     const productPrice = document.getElementsByClassName("priceField");
@@ -40,6 +44,7 @@ function totalPrice(){
     document.getElementById('discount-price').innerText = totalPrice;
 }
 
+//promo code functionality
 document.getElementById('promoCodeBtn').addEventListener('click', function(){
     const promoCodeInput = document.getElementById('promoCodeInput');
     const userInputPormoCode = promoCodeInput.value;
