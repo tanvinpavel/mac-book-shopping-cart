@@ -11,20 +11,20 @@ const customizeBtn = document.getElementsByClassName('btn-outline-dark');
 for(element of customizeBtn){
     element.addEventListener('click', function(event){
         const btnName = event.target.innerText;
-        if(btnName == '8GB unified memory'){
+        if(btnName.toLowerCase() == '8GB unified memory'){
             // console.log('first');
             addPrice(0, "memory");
-        }else if(btnName == '16GB unified memory'){
+        }else if(btnName.toLowerCase() == '16GB unified memory'.toLowerCase()){
             addPrice(180, "memory");
-        }else if(btnName == "256GB SSD storage"){
+        }else if(btnName.toLowerCase() == "256GB SSD storage".toLowerCase()){
             addPrice(0, "storage");
-        }else if(btnName == "512GB SSD storage"){
+        }else if(btnName.toLowerCase() == "512GB SSD storage".toLowerCase()){
             addPrice(100, "storage");
-        }else if(btnName == "1TB SSD storage"){
+        }else if(btnName.toLowerCase() == "1TB SSD storage".toLowerCase()){
             addPrice(180, "storage");
-        }else if(btnName == "Friday, Aug 25 FREE Prime Delivery"){
+        }else if(btnName.toLowerCase() == "Friday, Aug 25 FREE Prime Delivery".toLowerCase()){
             addPrice(0, "delivery");
-        }else if(btnName == "Friday, Aug 21 Delivery charge $20"){
+        }else if(btnName.toLowerCase() == "Friday, Aug 21 Delivery charge $20".toLowerCase()){
             addPrice(20, "delivery");
         }
         //count total price
